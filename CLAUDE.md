@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## What this is
 
-`@onlyoffice/docspace-vue` — a Vue 3 library that publishes a single `DocSpace` component wrapping the ONLYOFFICE DocSpace JS SDK (`@onlyoffice/docspace-sdk-js`). It is a library, not an app: there is no `index.html` and no dev server other than Storybook.
+`@onlyoffice/docspace-vue` — a Vue 3 library that publishes a single `DocSpace` component wrapping the ONLYOFFICE Apps (formerly DocSpace) JS SDK (`@onlyoffice/docspace-sdk-js`). It is a library, not an app: there is no `index.html` and no dev server other than Storybook.
 
 ## Commands
 
@@ -15,7 +15,7 @@ Node version is pinned in `.nvmrc` (24).
 - Single test: `npx vitest run tests/DocSpace.test.ts -t "renders the element"`
 - `npx vue-tsc -b --force` — full typecheck, as CI runs it (covers `src`, `stories`, `tests`, `.storybook`, and the Vite configs — wider than the build)
 - `npm run build` — `vue-tsc -b` → `vite build` (ESM `dist/index.js` + CJS `dist/index.cjs`) → `vue-tsc -p tsconfig.build.json` (declarations only, `src` only, into `dist`)
-- `npm run storybook` / `npm run build-storybook` — needs `.env` copied from `.env.example` with `VITE_DOCSPACE_URL` (and `VITE_DOCSPACE_FILE_ID` for the Editor story) pointing at a real portal
+- `npm run storybook` / `npm run build-storybook` — needs `.env` copied from `.env.example` with `VITE_DOCSPACE_URL` (and `VITE_DOCSPACE_FILE_ID` for the Editor story) pointing at a real ONLYOFFICE Apps instance
 
 ## Architecture
 

@@ -29,7 +29,7 @@ let docspaceInstance: SDKInstance | undefined;
 
 // Mount only: rebuilding the frame on a config change would destroy the open one
 // and drop whatever the user was doing in it. To change the configuration of an
-// open DocSpace, use the instance's setConfig method, which is handed out
+// open ONLYOFFICE Apps frame, use the instance's setConfig method, which is handed out
 // through the set-docspace-instance event.
 onMounted(() => {
   docspaceInstance = new SDK().initFrame(props.config);

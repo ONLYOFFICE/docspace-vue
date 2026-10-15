@@ -1,8 +1,8 @@
 # @onlyoffice/docspace-vue
 
-This repo contains the ONLYOFFICE Docspace Vue component which integrates [ONLYOFFICE DocSpace](https://github.com/ONLYOFFICE/DocSpace) into [Vue](https://vuejs.org/) projects.
+This repo contains the ONLYOFFICE Apps Vue component which integrates [ONLYOFFICE Apps](https://github.com/ONLYOFFICE/DocSpace) into [Vue](https://vuejs.org/) projects.
 
-**Please note**: To work with this component, you need to have ONLYOFFICE DocSpace. If you are new to DocSpace, [create an account](https://www.onlyoffice.com/docspace-registration.aspx).
+**Please note**: To work with this component, you need to have ONLYOFFICE Apps. If you are new to ONLYOFFICE Apps, [create an account](https://www.onlyoffice.com/docspace-registration.aspx).
 
 ## Prerequisites
 
@@ -10,7 +10,7 @@ This procedure requires [Node.js (and npm)](https://nodejs.org/en).
 
 The component is built for Vue 3 and requires *vue* and *@onlyoffice/docspace-sdk-js* 2.x as peer dependencies.
 
-## Creating the demo Vue application with ONLYOFFICE DocSpace
+## Creating the demo Vue application with ONLYOFFICE Apps
 
 This procedure creates a basic Vue application and installs an ONLYOFFICE Docs editor in it.
 
@@ -25,7 +25,7 @@ This procedure creates a basic Vue application and installs an ONLYOFFICE Docs e
     npm install
     ```
 
-3. Install ONLYOFFICE DocSpace Vue component from **npm** and save it to the *package.json* file with *--save*:
+3. Install ONLYOFFICE Apps Vue component from **npm** and save it to the *package.json* file with *--save*:
     ```
     npm install --save @onlyoffice/docspace-vue @onlyoffice/docspace-sdk-js
     ```
@@ -39,7 +39,7 @@ This procedure creates a basic Vue application and installs an ONLYOFFICE Docs e
     import { DocSpace } from "@onlyoffice/docspace-vue";
 
     const onAppReady = function (e) {
-        console.log("ONLYOFFICE DocSpace App is ready!");
+        console.log("ONLYOFFICE Apps is ready!");
     };
 
     const onAppError = (e) => {
@@ -71,9 +71,9 @@ This procedure creates a basic Vue application and installs an ONLYOFFICE Docs e
     </template>
     ```
     Replace the following lines with your own data:
-    * **"http://example-onlyoffice.com"** - replace with the address of your ONLYOFFICE DocSpace, specified without a trailing slash;
+    * **"http://example-onlyoffice.com"** - replace with the address of your ONLYOFFICE Apps instance, specified without a trailing slash;
 
-    This Vue single-file component will create the *App* component containing the ONLYOFFICE DocSpace configured with basic features.
+    This Vue single-file component will create the *App* component containing ONLYOFFICE Apps configured with basic features.
 
 5. Test the application using the Node.js development server:
     * To start the development server, navigate to the *docspace-vue-demo* directory and run:
@@ -120,26 +120,26 @@ Now you can deploy the application to the created server:
 ### Props
 | Name | Type | Default | Required | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| `config` | object | null | yes | Generic configuration object for opening a file with token. Requires `src` - the address of ONLYOFFICE DocSpace, specified without a trailing slash. [Config API](https://api.onlyoffice.com/docspace/jssdk/config/) |
+| `config` | object | null | yes | Generic configuration object for opening a file with token. Requires `src` - the address of the ONLYOFFICE Apps instance, specified without a trailing slash. [Config API](https://api.onlyoffice.com/docspace/jssdk/config/) |
 
 ### Events
 | Name | Payload | Description |
 | ------------- | ------------- | ------------- |
-| `set-docspace-instance` | `instance: SDKInstance` | Emitted when DocSpace instance is obtained. The instance provides API methods for working with DocSpace. |
+| `set-docspace-instance` | `instance: SDKInstance` | Emitted when the ONLYOFFICE Apps instance is obtained. The instance provides API methods for working with ONLYOFFICE Apps. |
 
 ### Notes
 
-* The `config` prop is applied when the component is mounted. To change the configuration of the already opened DocSpace, use the `setConfig` method of the instance obtained via the `set-docspace-instance` event, so that the frame is not recreated.
-* The component renders a wrapper element around the DocSpace frame. Its width and height are taken from `config.width` and `config.height` (*100%* by default), which keeps the percentage sizes of the frame working.
+* The `config` prop is applied when the component is mounted. To change the configuration of the already opened ONLYOFFICE Apps frame, use the `setConfig` method of the instance obtained via the `set-docspace-instance` event, so that the frame is not recreated.
+* The component renders a wrapper element around the ONLYOFFICE Apps frame. Its width and height are taken from `config.width` and `config.height` (*100%* by default), which keeps the percentage sizes of the frame working.
 
 ## Storybook
 
-Copy *.env.example* to *.env* and set the DocSpace the stories point at:
+Copy *.env.example* to *.env* and set the ONLYOFFICE Apps instance the stories point at:
 ```
 VITE_DOCSPACE_URL=https://example-onlyoffice.com
 VITE_DOCSPACE_FILE_ID=100000
 ```
-Only the *VITE_*-prefixed variables reach the browser. *VITE_DOCSPACE_FILE_ID* is the file the *Editor* story opens, it can be any file id from the portal above.
+Only the *VITE_*-prefixed variables reach the browser. *VITE_DOCSPACE_FILE_ID* is the file the *Editor* story opens, it can be any file id from the instance above.
 
 ### Build Storybook:
 ```
@@ -181,7 +181,7 @@ npm pack
 
 ## Feedback and support
 
-In case you have any issues, questions, or suggestions for the ONLYOFFICE DocSpace Vue component, please refer to the [Issues](https://github.com/ONLYOFFICE/docspace-vue/issues) section.
+In case you have any issues, questions, or suggestions for the ONLYOFFICE Apps Vue component, please refer to the [Issues](https://github.com/ONLYOFFICE/docspace-vue/issues) section.
 
 Official project website: [www.onlyoffice.com](https://www.onlyoffice.com/). 
 
