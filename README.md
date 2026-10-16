@@ -130,7 +130,7 @@ Now you can deploy the application to the created server:
 ### Notes
 
 * The `config` prop is applied when the component is mounted. To change the configuration of the already opened ONLYOFFICE Apps frame, use the `setConfig` method of the instance obtained via the `set-docspace-instance` event, so that the frame is not recreated.
-* The component renders a wrapper element around the ONLYOFFICE Apps frame. Its width and height are taken from `config.width` and `config.height` (*100%* by default), which keeps the percentage sizes of the frame working.
+* The component renders the ONLYOFFICE Apps frame placeholder inside a wrapper element. ONLYOFFICE Apps replaces the placeholder with its own container, so the wrapper is what keeps the component removable by Vue. The wrapper is styled with `display: contents` and creates no box of its own, so the frame is sized by `config.width` and `config.height` (*100%* by default) against the element you place the component in.
 
 ## Storybook
 
