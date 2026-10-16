@@ -8,7 +8,7 @@ This repo contains the ONLYOFFICE Apps Vue component which integrates [ONLYOFFIC
 
 This procedure requires [Node.js (and npm)](https://nodejs.org/en).
 
-The component is built for Vue 3 and requires *vue* and *@onlyoffice/docspace-sdk-js* 2.x as peer dependencies.
+The component is built for Vue 3 and requires *vue* and *@onlyoffice/docspace-sdk-js* 2.0.0 or later as peer dependencies.
 
 ## Creating the demo Vue application with ONLYOFFICE Apps
 
@@ -120,7 +120,7 @@ Now you can deploy the application to the created server:
 ### Props
 | Name | Type | Default | Required | Description |
 | ------------- | ------------- | ------------- | ------------- | ------------- |
-| `config` | object | null | yes | Generic configuration object for opening a file with token. Requires `src` - the address of the ONLYOFFICE Apps instance, specified without a trailing slash. [Config API](https://api.onlyoffice.com/docspace/jssdk/config/) |
+| `config` | object | — | yes | Generic configuration object for opening a file with token. Requires `src` - the address of the ONLYOFFICE Apps instance, specified without a trailing slash. [Config API](https://api.onlyoffice.com/docspace/jssdk/config/) |
 
 ### Events
 | Name | Payload | Description |
